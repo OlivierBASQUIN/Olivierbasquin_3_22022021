@@ -1,0 +1,21 @@
+{
+  "name": "olivierbasquin_3_22022021",
+  "version": "1.0.0",
+  "description": "création d'un site culinaire",
+  "main": "index.js",
+  "scripts": {
+      "sass": "sass ./sass/main.scss:./public/css/style.css -w --style compressed",
+      "prefix": "postcss ./public/css/style.css --use autoprefixer -d ./public/css/prefixed/"
+    },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OlivierBASQUIN/Olivierbasquin_3_22022021.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "browserslist": "last 4 versions",
+  "bugs": {
+    "url": "https://github.com/OlivierBASQUIN/Olivierbasquin_3_22022021/issues"
+  },
+  "homepage": "https://github.com/OlivierBASQUIN/Olivierbasquin_3_22022021#readme"
+}
