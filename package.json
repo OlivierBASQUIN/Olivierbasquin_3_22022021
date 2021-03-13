@@ -1,19 +1,20 @@
 {
   "name": "olivierbasquin_3_22022021",
   "version": "1.0.0",
-  "description": "création d'un site culinaire",
+  "description": "site culinaire",
   "main": "index.js",
   "scripts": {
-      "sass": "sass ./sass/main.scss:./public/css/style.css -w --style compressed",
-      "prefix": "postcss ./public/css/style.css --use autoprefixer -d ./public/css/prefixed/"
-    },
+    "sass": "sass --watch ./sass/main.scss:.public/css/style.css"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/OlivierBASQUIN/Olivierbasquin_3_22022021.git"
   },
+  "keywords": [
+    "Guernouloliv01++"
+  ],
   "author": "",
   "license": "ISC",
-  "browserslist": "last 4 versions",
   "bugs": {
     "url": "https://github.com/OlivierBASQUIN/Olivierbasquin_3_22022021/issues"
   },

@@ -1,8 +1,227 @@
-html {
-   
+/* ---------------------------------------- */
+/* == DÉFINITIONS DES POLICES*/
+/*---------------------------------------- */
+
+/* ---------------------------------------- */
+/* == ÉLÉMENTS PRINCIPAUX */
+/*---------------------------------------- */
+body,{
+    margin: auto;
+    max-width: 1200px; 
+  }
+
+.container {
+    padding: 1rem;
+  }
+
+ul {
+      list-style: none;
+  }
+
+img
+{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
 }
 
-body {
-    box-sizing: border-box;
-    
+a {
+    text-decoration: none;
 }
+
+h3, p {
+    margin: 0.2rem;
+}
+/* ---------------------------------------- */
+/* ==              HEADER               */
+/*---------------------------------------- */
+
+
+.header {
+    padding: 0.3rem;
+    margin-bottom: 0.3rem;
+    box-shadow: 0 0 1rem grey;
+  
+    &__logo {
+      margin: 0;
+      text-align: center;
+    }
+  }
+
+/* ---------------------------------------- */
+/* ==     SECTION 1  = Localisation   */
+/*---------------------------------------- */
+
+.localisation {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-color: rgb(235, 228, 228);
+    
+    &__logo {
+        margin-right: 0,5rem;
+    }
+
+    &__texte {
+        margin: 0.8rem;
+        font-weight: 500;
+    }
+}
+  
+/* ---------------------------------------- */
+/* ==      SECTION 2 = réservation   */
+/*---------------------------------------- */
+
+.reservation {
+    text-align: center;
+    background-color: rgb(248, 242, 242);
+    padding: 1rem 1rem 3.7rem 0.8rem;
+     
+     &__soustitre {
+         font-weight: 300;
+         margin: 0 0 2rem 0;
+     }
+
+     &__btn {
+        color: white;
+        border-radius: 2rem;
+        background-color: $color-primary;
+        padding: 0.8rem;
+    }
+ }
+/* ---------------------------------------- */
+/* == SECTION 3 = fonctionnement  */
+/*---------------------------------------- */
+
+.fonctionnement {
+
+    &__block {
+        padding: 0 0 0.8rem 0.4rem;
+       
+     @media (min-width:1200px) {
+        display: flex;
+        justify-content: space-around;
+     }
+    }
+
+    &__bulle {
+        display: flex;
+        align-items: center;
+        border-radius: 1.2rem;
+        background-color: rgb(235, 228, 228);
+        box-shadow: 0 0.3rem 0.5rem lightgrey;
+        padding: 1.5rem 1rem 1.5rem 1rem;
+        margin: 0 0 1.2rem 0;
+
+    @media (min-width:1200px) {
+       width: 25%;
+     }
+    }
+
+    &__nombre {
+        background-color: $color-primary;
+        border-radius: 100%;
+        width: 1.15rem;
+        text-align: center;
+        color: white;
+        margin: 0 1.2rem 0 -1.5rem;
+        
+    }
+    &__logo {
+        margin-right: 1.2rem;
+    }
+}
+/* ---------------------------------------- */
+/* == SECTION 4 = restaurants  */
+/*---------------------------------------- */
+
+.restaurants {
+    background-color: rgb(248, 242, 242);
+
+    &__blockimage {
+        height: 160px;
+        position: relative;
+        }
+    &__vignette {
+        background-color: $color-tertiary;
+        color: darken($color-tertiary, 50%);
+        padding: 0.5rem;
+        border-radius: 0.15rem;
+        position: absolute;
+        top: 0.7rem;
+        right: 0.7rem;
+          }
+
+    &__bulle {
+    border-radius: 1rem;
+    box-shadow: 0 0 1rem rgb(189, 186, 186);
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+
+    @media (min-width:1200px) {
+        width: 45%;
+        margin: auto;
+        margin-bottom: 3.2rem;
+      }
+
+        &__block {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.5rem 1.5rem 0.5rem 1rem;
+            color: black;
+        }
+        &__logo {
+           font-size: 1.3rem;
+        }
+    }
+}
+
+.restaurants__block {
+@media (min-width:1200px) {
+    display: flex;
+   flex-wrap: wrap;
+  }
+}
+/* ---------------------------------------- */
+/* ==            FOOTER                 */
+/*---------------------------------------- */
+
+.footer {
+    background-color: #353535;
+
+    @media (min-width:1200px) {
+       text-align: center;
+      }
+    
+    &__logoohmyfood {
+      color: white;
+      font-family: "Shrikhand", "cursive";
+      margin: 0;
+      font-size: 1.3rem;
+      margin-bottom: 0.5rem;
+    }
+  
+    &__liste {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+  
+    &__texte {
+      margin: 0.5rem 0;
+    }
+  
+    &__lien {
+      color: white;
+      text-decoration: none;
+    }
+  
+    &__logo {
+      width: 1rem;
+      margin-right: 0.8rem;
+    }
+  }
+
