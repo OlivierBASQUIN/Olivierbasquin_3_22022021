@@ -3,31 +3,37 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://kit.fontawesome.com/7d17636476.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href=".public/css/style.css" />
+  <script src="https://kit.fontawesome.com/0cbc956c1a.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
   <title>Menu - Le délice des sens - ohmyfood</title>
   
 </head>
 <body>
   <header class="header--aveclogo">
-    <div class="header__block">
+    <div class="header__block--aveclogo">
       <a href="./index.html"><i class="fas fa-arrow-left header__block__fleche"></i></a>
-      <h1><img class="header__block__logo" src="images/logo/ohmyfood.png" alt="logo ohmyfood"></h1>
+      <h1 class="header__logo">ohmyfood</h1>
     </div>
   </header>
 
   <img src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="assiette gastronomique" class="images__menus">
 
-  <div class="container">
+  <div class="containermenu">
     <div class="menu__blocktitre">
       <h2 class="menu__blocktitre__titre">Le délice des sens</h2>
       <button class="menu__blocktitre__btn">
-        <i class="fas fa-heart menu__blocktitre__btn__logo"></i>
+        <i class="far fa-heart menu__blocktitre__btn__logo"></i>
       </button>
     </div>
 
     <div class="menu">
       <section class="menu__block">
         <h3 class="menu__block__titre">ENTREES</h3>
+        <div class="menu__block__souligne"></div>
         <div class="menu__block__bulles">
           <div class="menu__block__bulles__texte">
             <h4 class="menu__block__bulles__texte__titre">Tartare de thon</h4>
@@ -71,6 +77,7 @@
   
       <section class="menu__block">
         <h3 class="menu__block__titre">PLATS</h3>
+        <div class="menu__block__souligne"></div>
         <div class="menu__block__bulles">
           <div class="menu__block__bulles__texte">
             <h4 class="menu__block__bulles__texte__titre">Poulet rôti aux herbes de Provence </h4>
@@ -113,6 +120,7 @@
 
       <section class="menu__block">
         <h3 class="menu__block__titre">DESSERTS</h3>
+        <div class="menu__block__souligne"></div>
         <div class="menu__block__bulles">
           <div class="menu__block__bulles__texte">
             <h4 class="menu__block__bulles__texte__titre">Farandole de desserts</h4>
@@ -161,19 +169,19 @@
 
   <footer class="footer">
     <div class="container">
-      <p><img class="footer__logo" src="images/logo/ohmyfood.png" alt="logo ohmyfood"></p>
+      <p class="footer__logoohmyfood">ohmyfood</p>
       <ul class="footer__liste">
-        <li class="footer__liste__textes">
-          <a class="footer__liste__textes__lien" href="#"><i class="fas fa-utensils footer__liste__textes__liens__logo"></i>Proposer un restaurant</a>
+        <li class="footer__texte">
+          <a class="footer__lien" href="#"><i class="fas fa-utensils footer__logo"></i>Proposer un restaurant</a>
         </li>
-        <li class="footer__liste__textes">
-          <a class="footer__liste__textes__lien" href="#"><i class="fas fa-hands-helping footer__liste__textes__liens__logo"></i>Devenir partenaire</a>
+        <li class="footer__texte">
+          <a class="footer__lien" href="#"><i class="fas fa-hands-helping footer__logo"></i>Devenir partenaire</a>
         </li>
-        <li class="footer__liste__textes">
-          <a class="footer__liste__textes__lien" href="#">Mentions légales</a>
+        <li class="footertexte">
+          <a class="footer__lien" href="#">Mentions légales</a>
         </li>
-        <li class="footer__liste__textes">
-          <a class="footer__liste__textes__lien" href="mailto:contact@ohmyfood.com">Contact</a>
+        <li class="footer__texte">
+          <a class="footer__lien" href="mailto:contact@ohmyfood.com">Contact</a>
         </li>
       </ul>
     </div>

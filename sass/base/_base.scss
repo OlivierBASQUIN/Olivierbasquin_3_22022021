@@ -29,8 +29,17 @@ a {
     text-decoration: none;
 }
 
+h2 {
+  font-size: 1.7rem;
+  margin: 1rem 0;
+}
+
 h3, p {
-    margin: 0.2rem;
+  margin: 0;  
+}
+
+h4 {
+  margin: 0 0 0.3rem 0;
 }
 /* ---------------------------------------- */
 /* ==              HEADER               */
@@ -45,6 +54,25 @@ h3, p {
     &__logo {
       margin: 0;
       text-align: center;
+    }
+
+    &--aveclogo {
+      margin-bottom: 0;
+    }
+
+    &__block--aveclogo {
+      display: flex;
+      align-items: center; 
+      justify-content: center;
+      position: relative;
+    
+      i {
+        margin-right: 5rem;
+        position: absolute;
+        left: 1rem;
+        top : 1rem;
+        color: black;
+      }
     }
   }
 
@@ -74,7 +102,7 @@ h3, p {
 
 .reservation {
     text-align: center;
-    background-color: rgb(248, 242, 242);
+    background-color: $color-lightgrey;
     padding: 1rem 1rem 3.7rem 0.8rem;
      
      &__soustitre {
@@ -108,7 +136,7 @@ h3, p {
         display: flex;
         align-items: center;
         border-radius: 1.2rem;
-        background-color: rgb(235, 228, 228);
+        background-color: $color-lightgrey;
         box-shadow: 0 0.3rem 0.5rem lightgrey;
         padding: 1.5rem 1rem 1.5rem 1rem;
         margin: 0 0 1.2rem 0;
@@ -225,3 +253,128 @@ h3, p {
     }
   }
 
+/* ---------------------------------------- */
+/* ==            PAGES MENUS               */
+/*---------------------------------------- */
+
+.images__menus {
+  max-height: 30rem;
+}
+.containermenu {
+  margin-top: -4rem;
+  padding: 0.5rem 1rem;
+  border-radius: 2rem 2rem 0 0;
+  background-color: $color-lightgrey;
+  position: relative;
+}
+
+.menu__blocktitre {
+  display: flex;
+  justify-content: space-between;
+
+  &__btn {
+    height: 2rem;
+    width: 2rem;
+    background-color: transparent;
+    border: transparent 0px solid;
+    padding: 0;
+    margin: 1rem 1rem 0 0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+      &__logo {
+        font-size: 1.6rem;
+      }
+  }
+}
+
+.menu__block {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+
+  &__titre {
+    padding-bottom: 0.2rem;
+    font-weight: 300;
+    font-size: 1rem;
+    margin-top: 1rem;
+  }
+
+  &__souligne {
+      width: 3rem;
+      height: 3px;
+      background-color: $color-tertiary;
+      margin-bottom: 0.5rem;
+  }
+
+  &__bulles {
+  background-color: white;
+  padding-left: 1rem;
+  display: flex;
+  border-radius: 1rem;
+  margin: 0.5rem 0;
+  box-shadow: 0 0 0.5rem lightgrey;
+
+    &__texte {
+      flex: 1;
+      overflow: hidden;
+      padding: 0.5rem;
+    
+      & h4 {
+       white-space: nowrap;
+       text-overflow: ellipsis;
+       overflow: hidden;
+      }
+
+      & p {
+        font-size: 0.9rem;
+        font-weight: 300;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
+    }
+  
+    &__tarif {
+      display: flex;
+      align-items: flex-end;
+      padding: 0.5rem 1rem 0.5rem 0.5rem;
+    }
+
+    &__logovalidation {
+      background-color: $color-tertiary;
+      width: 3.5rem;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      border-radius: 0 1rem 1rem 0;
+
+        &__logo {
+          height: 1.3rem;
+          width: 1.3rem;
+          background-color: white;
+          display:flex;
+          align-items:center;
+          justify-content:center;
+          border-radius: 100%;
+
+          &__logo {
+            color: $color-tertiary;
+            font-size: 0.9rem;
+          }
+        }
+      }
+    }
+  }
+
+  .btncommander {
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0rem 2.5rem 0;
+    text-decoration: none;
+
+    &__texte {
+      @include button;
+    }
+  }
