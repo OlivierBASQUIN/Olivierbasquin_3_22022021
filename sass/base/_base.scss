@@ -42,7 +42,7 @@ h4 {
   margin: 0 0 0.3rem 0;
 }
 
-.loader {
+loader {
   position: fixed;
   height: 100%;
   width: 100%;
@@ -175,9 +175,14 @@ h4 {
         padding: 1.5rem 1rem 1.5rem 1rem;
         margin: 0 0 1.2rem 0; 
 
-          &--rose {
+          &:hover {
             background-color: lighten($color: $color-primary, $amount: 35%);
           }
+
+            &:hover i{
+              color: $color-primary;
+            }
+
       
         @media (min-width:1200px) {
          width: 25%;
@@ -194,11 +199,7 @@ h4 {
         
     }
     &__logo {
-        margin-right: 1.7rem;
-
-        &--rose {
-          color: $color-primary;
-        }  
+        margin-right: 1.7rem; 
       }
     }
 

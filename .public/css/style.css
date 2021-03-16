@@ -33,7 +33,7 @@ h3, p {
 h4 {
   margin: 0 0 0.3rem 0; }
 
-.loader {
+loader {
   position: fixed;
   height: 100%;
   width: 100%;
@@ -45,7 +45,7 @@ h4 {
   display: flex;
   align-items: center;
   justify-content: center; }
-  .loader__cercle {
+  loader__cercle {
     width: 50px;
     height: 50px;
     border: 20px solid #9356DC;
@@ -143,8 +143,10 @@ h4 {
   box-shadow: 0 0.3rem 0.5rem lightgrey;
   padding: 1.5rem 1rem 1.5rem 1rem;
   margin: 0 0 1.2rem 0; }
-  .fonctionnement__bulle--rose {
+  .fonctionnement__bulle:hover {
     background-color: #f2eafb; }
+  .fonctionnement__bulle:hover i {
+    color: #9356DC; }
   @media (min-width: 1200px) {
     .fonctionnement__bulle {
       width: 25%; } }
@@ -157,8 +159,6 @@ h4 {
   margin: 0 1.7rem 0 -1.5rem; }
 .fonctionnement__logo {
   margin-right: 1.7rem; }
-  .fonctionnement__logo--rose {
-    color: #9356DC; }
 
 /* ---------------------------------------- */
 /* == SECTION 4 = restaurants  */
