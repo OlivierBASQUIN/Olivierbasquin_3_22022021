@@ -1,17 +1,23 @@
 @mixin button {
     color: white;
     border-radius: 2rem;
-    background-color: $color-primary;
     padding: 0.7rem 1rem;
     width: 180px;
     box-shadow: 0 0.3rem 0.5rem lightgrey;
     background: linear-gradient(0, $color-primary, $color-secondary);
     text-decoration: none;
     border: none;
+    transition: all 200ms;
 
     &:hover {
-        background-color: white;
         box-shadow: 0 0.3rem 0.5rem darken(lightgrey, 50%);
         background: linear-gradient(0, lighten($color-primary, 8%), lighten($color-secondary, 8%));
       }
     }
+
+@mixin animation-menu {
+    animation: bullesvisibles;
+    animation-duration: 3s;
+    animation-fill-mode: both;
+    opacity: 0;
+}

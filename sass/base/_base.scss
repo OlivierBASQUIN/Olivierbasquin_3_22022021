@@ -42,19 +42,20 @@ h4 {
   margin: 0 0 0.3rem 0;
 }
 
-loader {
+.loader {
   position: fixed;
   height: 100%;
   width: 100%;
   left: 0;
   top: 0;
   background-color: rgba(255, 255, 255, 0.95);
-  animation-delay: 2s;
-  z-index: 10000;
+  animation: loader;
+  transform: scale(0);
+  animation-duration: 3s;
+  z-index: 1;
   display:flex;
   align-items:center;
   justify-content:center;
-
 
 
     &__cercle {
@@ -63,7 +64,7 @@ loader {
       border: 20px solid #9356DC;
       border-top: 20px solid #FF79DA;
       border-radius: 50%;
-      animation: spin 1s linear infinite;
+      animation: spin 3s linear infinite;
     }
   }
 
@@ -72,6 +73,18 @@ loader {
   100% { transform: rotate(360deg);
   }
 }
+
+@keyframes loader {
+  0% {
+    transform: scale(1);
+  }
+  99% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+} 
 /* ---------------------------------------- */
 /* ==              HEADER               */
 /*---------------------------------------- */
@@ -174,6 +187,7 @@ loader {
         box-shadow: 0 0.3rem 0.5rem lightgrey;
         padding: 1.5rem 1rem 1.5rem 1rem;
         margin: 0 0 1.2rem 0; 
+        transition: all 100ms;
 
           &:hover {
             background-color: lighten($color: $color-primary, $amount: 35%);
@@ -371,6 +385,39 @@ loader {
   border-radius: 1rem;
   margin: 0.5rem 0;
   box-shadow: 0 0 0.5rem lightgrey;
+  overflow: hidden;
+
+    &:hover .menu__block__bulles__logovalidation {
+      margin-right: 0rem;
+    }
+
+    &:hover .menu__block__bulles__logovalidation__logo{
+     transform: rotate(0);
+     transition-delay: 0.1s;
+    }
+
+    &--entrees {
+      @include animation-menu;
+    } 
+
+    &--plats {
+      @include animation-menu;
+      animation-delay: 0.4s;
+    } 
+    
+    &--desserts {
+      @include animation-menu;
+      animation-delay: 0.8s;
+    } 
+
+  @keyframes bullesvisibles {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
 
     &__texte {
       flex: 1;
@@ -400,11 +447,13 @@ loader {
 
     &__logovalidation {
       background-color: $color-tertiary;
-      width: 3.5rem;
+      margin: 0 -4rem 0 0rem;
+      width: 4rem;
       display:flex;
       align-items:center;
       justify-content:center;
-      border-radius: 0 1rem 1rem 0;
+      transition-duration: 0.5s;
+
 
         &__logo {
           height: 1.3rem;
@@ -414,6 +463,8 @@ loader {
           align-items:center;
           justify-content:center;
           border-radius: 100%;
+          transform: rotate(-200deg);
+          transition: transform 0.5s;
 
           &__logo {
             color: $color-tertiary;
