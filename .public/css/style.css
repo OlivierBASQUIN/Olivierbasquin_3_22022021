@@ -9,9 +9,6 @@
 /* ==  propriétés du coeur plein             */
 /*---------------------------------------- */
 /* ---------------------------------------- */
-/* == DÉFINITIONS DES POLICES*/
-/*---------------------------------------- */
-/* ---------------------------------------- */
 /* == ÉLÉMENTS PRINCIPAUX */
 /*---------------------------------------- */
 body {
@@ -112,7 +109,7 @@ h4 {
   align-items: center;
   background-color: #ebe4e4; }
   .localisation__logo {
-    margin-right: 0,5rem; }
+    margin-right: 0.3rem; }
   .localisation__texte {
     margin: 0.8rem;
     font-weight: 500; }
