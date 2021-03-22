@@ -1,5 +1,14 @@
 @charset "UTF-8";
 /* ---------------------------------------- */
+/* ==  propriétés du button dégradé             */
+/*---------------------------------------- */
+/* ---------------------------------------- */
+/* ==  propriétés du button ::after              */
+/*---------------------------------------- */
+/* ---------------------------------------- */
+/* ==  propriétés du coeur plein             */
+/*---------------------------------------- */
+/* ---------------------------------------- */
 /* == DÉFINITIONS DES POLICES*/
 /*---------------------------------------- */
 /* ---------------------------------------- */
@@ -19,6 +28,10 @@ img {
   height: 100%;
   width: 100%;
   object-fit: cover; }
+
+.fa-heart {
+  font-size: 1.6rem;
+  color: #5f5c5c; }
 
 a {
   text-decoration: none; }
@@ -40,10 +53,9 @@ h4 {
   left: 0;
   top: 0;
   background-color: rgba(255, 255, 255, 0.95);
-  animation: loader;
+  animation: loader 2s;
   transform: scale(0);
-  animation-duration: 3s;
-  z-index: 1;
+  z-index: 10;
   display: flex;
   align-items: center;
   justify-content: center; }
@@ -53,7 +65,7 @@ h4 {
     border: 20px solid #9356DC;
     border-top: 20px solid #FF79DA;
     border-radius: 50%;
-    animation: spin 3s linear infinite; }
+    animation: spin 2s linear infinite; }
 
 @keyframes spin {
   0% {
@@ -120,14 +132,29 @@ h4 {
     border-radius: 2rem;
     padding: 0.7rem 1rem;
     width: 180px;
+    margin: auto;
     box-shadow: 0 0.3rem 0.5rem lightgrey;
     background: linear-gradient(0, #9356DC, #FF79DA);
     text-decoration: none;
     border: none;
-    transition: all 200ms; }
-    .reservation__btn:hover {
+    transition: all 200ms;
+    position: relative;
+    z-index: 1; }
+    .reservation__btn:hover::after {
+      opacity: 1; }
+    .reservation__btn::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      opacity: 0;
+      z-index: -1;
+      transition: opacity 250ms;
       box-shadow: 0 0.3rem 0.5rem #545454;
-      background: linear-gradient(0, #a978e3, #ffa2e5); }
+      background: linear-gradient(0, #a978e3, #ffa2e5);
+      border-radius: 2rem; }
 
 /* ---------------------------------------- */
 /* == SECTION 3 = fonctionnement  */
@@ -151,9 +178,10 @@ h4 {
   box-shadow: 0 0.3rem 0.5rem lightgrey;
   padding: 1.5rem 1rem 1.5rem 1rem;
   margin: 0 0 1.2rem 0;
-  transition: all 100ms; }
+  transition: all 200ms; }
   .fonctionnement__bulle:hover {
-    background-color: #f2eafb; }
+    background-color: #f2eafb;
+    transform: scale(1.05); }
   .fonctionnement__bulle:hover i {
     color: #9356DC; }
   @media (min-width: 1200px) {
@@ -203,9 +231,21 @@ h4 {
       justify-content: space-between;
       padding: 0.5rem 1.5rem 0.5rem 1rem;
       color: black; }
-    .restaurants__bulle__logo {
-      font-size: 1.3rem;
-      color: #5f5c5c; }
+    .restaurants__bulle__logobox {
+      position: relative; }
+    .restaurants__bulle__logo--plein {
+      color: #9356DC;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      opacity: 0;
+      z-index: 1;
+      left: 0.3px; }
+      .restaurants__bulle__logo--plein:hover {
+        animation: like 1s;
+        animation-fill-mode: both; }
 
 @media (min-width: 600px) {
   .restaurants__block {
@@ -269,18 +309,53 @@ h4 {
     margin: 1rem 1rem 0 0;
     display: flex;
     align-items: center;
-    justify-content: center; }
-    .menu__blocktitre__btn__logo {
-      font-size: 1.6rem;
-      color: #5f5c5c; }
+    justify-content: center;
+    position: relative;
+    overflow: hidden; }
+    .menu__blocktitre__btn__logo--plein {
+      color: #9356DC;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      opacity: 0;
+      z-index: 1;
+      top: 3.5px; }
+      .menu__blocktitre__btn__logo--plein:hover {
+        animation: like 1s;
+        animation-fill-mode: both; }
 
+@keyframes like {
+  0% {
+    transform: scale(0.5);
+    opacity: 0; }
+  100% {
+    transform: scale(0.87);
+    opacity: 1; } }
 .menu__block {
   display: flex;
   flex-direction: column;
-  margin-bottom: 1rem; }
+  margin-bottom: 1rem;
+  animation: bullesvisibles 1s;
+  animation-fill-mode: both; }
+  .menu__block--1 {
+    animation-delay: 150ms; }
+  .menu__block--2 {
+    animation-delay: 300ms; }
+  .menu__block--3 {
+    animation-delay: 450ms; }
+@keyframes bullesvisibles {
+  0% {
+    opacity: 0;
+    transform: translateY(10px); }
+  100% {
+    opacity: 1;
+    transform: translateY(0px); } }
   @media (min-width: 1200px) {
     .menu__block {
-      width: 32%; } }
+      width: 32%;
+      height: 500px; } }
   .menu__block__titre {
     padding-bottom: 0.2rem;
     font-weight: 300;
@@ -304,28 +379,6 @@ h4 {
     .menu__block__bulles:hover .menu__block__bulles__logovalidation__logo {
       transform: rotate(0);
       transition-delay: 0.1s; }
-    .menu__block__bulles--entrees {
-      animation: bullesvisibles;
-      animation-duration: 3s;
-      animation-fill-mode: both;
-      opacity: 0; }
-    .menu__block__bulles--plats {
-      animation: bullesvisibles;
-      animation-duration: 3s;
-      animation-fill-mode: both;
-      opacity: 0;
-      animation-delay: 0.4s; }
-    .menu__block__bulles--desserts {
-      animation: bullesvisibles;
-      animation-duration: 3s;
-      animation-fill-mode: both;
-      opacity: 0;
-      animation-delay: 0.8s; }
-@keyframes bullesvisibles {
-  0% {
-    opacity: 0; }
-  100% {
-    opacity: 1; } }
     .menu__block__bulles__texte {
       flex: 1;
       overflow: hidden;
@@ -377,14 +430,29 @@ h4 {
     border-radius: 2rem;
     padding: 0.7rem 1rem;
     width: 180px;
+    margin: auto;
     box-shadow: 0 0.3rem 0.5rem lightgrey;
     background: linear-gradient(0, #9356DC, #FF79DA);
     text-decoration: none;
     border: none;
-    transition: all 200ms; }
-    .btncommander__texte:hover {
+    transition: all 200ms;
+    position: relative;
+    z-index: 1; }
+    .btncommander__texte:hover::after {
+      opacity: 1; }
+    .btncommander__texte::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      opacity: 0;
+      z-index: -1;
+      transition: opacity 250ms;
       box-shadow: 0 0.3rem 0.5rem #545454;
-      background: linear-gradient(0, #a978e3, #ffa2e5); }
+      background: linear-gradient(0, #a978e3, #ffa2e5);
+      border-radius: 2rem; }
 
 body {
   font-family: 'Roboto', sans-serif;

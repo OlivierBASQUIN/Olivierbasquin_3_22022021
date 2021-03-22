@@ -1,23 +1,61 @@
+
+/* ---------------------------------------- */
+/* ==  propriétés du button dégradé             */
+/*---------------------------------------- */
 @mixin button {
     color: white;
     border-radius: 2rem;
     padding: 0.7rem 1rem;
     width: 180px;
+    margin: auto;
     box-shadow: 0 0.3rem 0.5rem lightgrey;
     background: linear-gradient(0, $color-primary, $color-secondary);
     text-decoration: none;
     border: none;
     transition: all 200ms;
+    position: relative;
+    z-index: 1;
 
     &:hover {
-        box-shadow: 0 0.3rem 0.5rem darken(lightgrey, 50%);
-        background: linear-gradient(0, lighten($color-primary, 8%), lighten($color-secondary, 8%));
+        &::after {
+          opacity: 1;
+        }
       }
     }
 
-@mixin animation-menu {
-    animation: bullesvisibles;
-    animation-duration: 3s;
-    animation-fill-mode: both;
+/* ---------------------------------------- */
+/* ==  propriétés du button ::after              */
+/*---------------------------------------- */
+@mixin buttonclair {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;  
+    left: 0;
     opacity: 0;
+    z-index: -1;
+    transition: opacity 250ms;
+    box-shadow: 0 0.3rem 0.5rem darken(lightgrey, 50%);
+    background: linear-gradient(0, lighten($color-primary, 8%), lighten($color-secondary, 8%));
+    border-radius: 2rem;
+}
+
+/* ---------------------------------------- */
+/* ==  propriétés du coeur plein             */
+/*---------------------------------------- */
+@mixin like {
+    color: $color-primary;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;  
+    left: 0;
+    opacity: 0;
+    z-index: 1;
+
+      &:hover {
+        animation: like 1s;
+        animation-fill-mode: both;
+   }
 }
