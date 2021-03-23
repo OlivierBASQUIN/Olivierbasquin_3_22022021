@@ -45,7 +45,13 @@
 /* ==  propriétés du coeur plein             */
 /*---------------------------------------- */
 @mixin like {
-    color: $color-primary;
+  background: -moz-linear-gradient(top, $color-primary 0%, $color-secondary 100%); 
+  background: -webkit-linear-gradient(top, $color-primary 0%, $color-secondary 100%); 
+  background: linear-gradient(to bottom, $color-primary 0%, $color-secondary 100%);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+ -webkit-text-fill-color:transparent;
     position: absolute;
     top: 0;
     right: 0;

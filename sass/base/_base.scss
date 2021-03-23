@@ -52,7 +52,7 @@ h4 {
   top: 0;
   background-color: rgba(255, 255, 255, 0.95);
   animation: loader $loader-delay;
-  transform: scale(0);
+  visibility: hidden;
   
   z-index: 10;
   display:flex;
@@ -78,13 +78,13 @@ h4 {
 
 @keyframes loader {
   0% {
-    transform: scale(1);
+    visibility: visible;
   }
   99% {
-    transform: scale(1);
+    visibility: visible;
   }
   100% {
-    transform: scale(0);
+    visibility: hidden;
   }
 } 
 /* ---------------------------------------- */
@@ -272,7 +272,7 @@ h4 {
 
         &__logo--plein {
           @include like;
-          left: 0.25px;
+          left: 0.30px;
        }
     }
 }
@@ -375,7 +375,7 @@ h4 {
    opacity: 0;
   }
   100% {
-    transform: scale(0.87);
+    transform: scale(1.015);
     opacity: 1;
   }
 }
