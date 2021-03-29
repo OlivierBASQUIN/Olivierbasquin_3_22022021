@@ -8,9 +8,6 @@
 /* ---------------------------------------- */
 /* ==  propriétés du coeur plein             */
 /*---------------------------------------- */
-/* ---------------------------------------- */
-/* == ÉLÉMENTS PRINCIPAUX */
-/*---------------------------------------- */
 body {
   max-width: 1200px;
   margin: auto; }
@@ -42,6 +39,13 @@ h3, p {
 
 h4 {
   margin: 0 0 0.3rem 0; }
+
+body {
+  font-family: 'Roboto', sans-serif;
+  color: black; }
+
+h1, .menu__blocktitre__titre {
+  font-family: "Shrikhand", "cursive"; }
 
 .loader {
   position: fixed;
@@ -76,9 +80,6 @@ h4 {
     visibility: visible; }
   100% {
     visibility: hidden; } }
-/* ---------------------------------------- */
-/* ==              HEADER               */
-/*---------------------------------------- */
 .header {
   padding: 0.3rem;
   margin-bottom: 0.3rem;
@@ -100,9 +101,30 @@ h4 {
       top: 1rem;
       color: black; }
 
-/* ---------------------------------------- */
-/* ==     SECTION 1  = Localisation   */
-/*---------------------------------------- */
+.footer {
+  background-color: #353535; }
+  @media (min-width: 700px) {
+    .footer {
+      text-align: center; } }
+  .footer__logoohmyfood {
+    color: white;
+    font-family: "Shrikhand", "cursive";
+    margin: 0;
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem; }
+  .footer__liste {
+    list-style: none;
+    padding: 0;
+    margin: 0; }
+  .footer__texte {
+    margin: 0.5rem 0; }
+  .footer__lien {
+    color: white;
+    text-decoration: none; }
+  .footer__logo {
+    width: 1rem;
+    margin-right: 0.8rem; }
+
 .localisation {
   display: flex;
   justify-content: center;
@@ -114,9 +136,6 @@ h4 {
     margin: 0.8rem;
     font-weight: 500; }
 
-/* ---------------------------------------- */
-/* ==      SECTION 2 = réservation   */
-/*---------------------------------------- */
 .reservation {
   text-align: center;
   background-color: #f8f2f2;
@@ -153,9 +172,6 @@ h4 {
       background: linear-gradient(0, #a978e3, #ffa2e5);
       border-radius: 2rem; }
 
-/* ---------------------------------------- */
-/* == SECTION 3 = fonctionnement  */
-/*---------------------------------------- */
 .fonctionnement__block {
   padding: 0 0 0.8rem 0.4rem;
   display: flex;
@@ -194,9 +210,6 @@ h4 {
 .fonctionnement__logo {
   margin-right: 1.7rem; }
 
-/* ---------------------------------------- */
-/* == SECTION 4 = restaurants  */
-/*---------------------------------------- */
 .restaurants {
   background-color: #f8f2f2; }
   .restaurants__blockimage {
@@ -255,36 +268,6 @@ h4 {
     display: flex;
     flex-wrap: wrap; } }
 
-/* ---------------------------------------- */
-/* ==            FOOTER                 */
-/*---------------------------------------- */
-.footer {
-  background-color: #353535; }
-  @media (min-width: 700px) {
-    .footer {
-      text-align: center; } }
-  .footer__logoohmyfood {
-    color: white;
-    font-family: "Shrikhand", "cursive";
-    margin: 0;
-    font-size: 1.3rem;
-    margin-bottom: 0.5rem; }
-  .footer__liste {
-    list-style: none;
-    padding: 0;
-    margin: 0; }
-  .footer__texte {
-    margin: 0.5rem 0; }
-  .footer__lien {
-    color: white;
-    text-decoration: none; }
-  .footer__logo {
-    width: 1rem;
-    margin-right: 0.8rem; }
-
-/* ---------------------------------------- */
-/* ==            PAGES MENUS               */
-/*---------------------------------------- */
 .images__menus {
   max-height: 30rem; }
 
@@ -462,12 +445,5 @@ h4 {
       box-shadow: 0 0.3rem 0.5rem #545454;
       background: linear-gradient(0, #a978e3, #ffa2e5);
       border-radius: 2rem; }
-
-body {
-  font-family: 'Roboto', sans-serif;
-  color: black; }
-
-h1, .menu__blocktitre__titre {
-  font-family: "Shrikhand", "cursive"; }
 
 /*# sourceMappingURL=style.css.map */

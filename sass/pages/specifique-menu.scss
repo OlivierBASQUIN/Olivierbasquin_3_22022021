@@ -1,0 +1,185 @@
+.images__menus {
+    max-height: 30rem;
+  }
+  .containermenu {
+    margin-top: -4rem;
+    padding: 0.5rem 1rem;
+    border-radius: 2rem 2rem 0 0;
+    background-color: $color-lightgrey;
+    position: relative;
+  }
+  .menu {
+    @media (min-width:1200px) {
+      display: flex;
+      justify-content: space-around;
+    }
+  }
+  
+  .menu__blocktitre {
+    display: flex;
+    justify-content: space-between;
+  
+    &__btn {
+      height: 2rem;
+      width: 2rem;
+      background-color: transparent;
+      border: transparent 0px solid;
+      padding: 0;
+      margin: 1rem 1rem 0 0;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      position: relative;
+      overflow: hidden;
+         
+        &__logo--plein {
+          @include like;
+          top: 3.5px;
+          }
+        }
+    }
+  
+  @keyframes like {
+    0% {
+     transform: scale(0.5);
+     opacity: 0;
+    }
+    100% {
+      transform: scale(1.015);
+      opacity: 1;
+    }
+  }
+   
+  
+  .menu__block {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    animation: bullesvisibles 1s;
+    animation-fill-mode: both;
+    @for $i from 1 through 3 {
+      &--#{$i} {
+          animation-delay: $animation-delay * $i;
+       }
+   }
+  
+   @keyframes bullesvisibles {
+    0% {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+  }
+  
+    @media (min-width:1200px) {
+      width: 32%;
+      height: 500px;
+    }
+    
+    &__titre {
+      padding-bottom: 0.2rem;
+      font-weight: 300;
+      font-size: 1rem;
+      margin-top: 1rem;
+    }
+  
+    &__souligne {
+        width: 3rem;
+        height: 3px;
+        background-color: $color-tertiary;
+        margin-bottom: 0.5rem;
+    }
+  
+    &__bulles {
+    background-color: white;
+    padding-left: 1rem;
+    display: flex;
+    border-radius: 1rem;
+    margin: 0.5rem 0;
+    box-shadow: 0 0 0.5rem lightgrey;
+    overflow: hidden;
+  
+      &:hover .menu__block__bulles__logovalidation {
+        margin-right: 0rem;
+      }
+  
+      &:hover .menu__block__bulles__logovalidation__logo{
+       transform: rotate(0);
+       transition-delay: 0.1s;
+      }
+  
+      &__texte {
+        flex: 1;
+        overflow: hidden;
+        padding: 0.5rem;
+      
+        & h4 {
+         white-space: nowrap;
+         text-overflow: ellipsis;
+         overflow: hidden;
+        }
+  
+        & p {
+          font-size: 0.9rem;
+          font-weight: 300;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          overflow: hidden;
+        }
+      }
+    
+      &__tarif {
+        display: flex;
+        align-items: flex-end;
+        padding: 0.5rem 1rem 0.5rem 0.5rem;
+      }
+  
+      &__logovalidation {
+        background-color: $color-tertiary;
+        margin: 0 -4rem 0 0rem;
+        width: 4rem;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        transition-duration: 0.5s;
+  
+  
+          &__logo {
+            height: 1.3rem;
+            width: 1.3rem;
+            background-color: white;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            border-radius: 100%;
+            transform: rotate(-200deg);
+            transition: transform 0.5s;
+  
+            &__logo {
+              color: $color-tertiary;
+              font-size: 0.9rem;
+            }
+          }
+        }
+      }
+    }
+  
+    .btncommander {
+      display: flex;
+      justify-content: center;
+      padding: 1rem 0rem 2.5rem 0;
+      text-decoration: none;
+      border: none;
+  
+      &__texte {
+        @include button;
+  
+        &::after {
+          @include buttonclair
+        }
+      }
+    }
+  

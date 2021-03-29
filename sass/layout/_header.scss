@@ -1,0 +1,29 @@
+.header {
+    padding: 0.3rem;
+    margin-bottom: 0.3rem;
+    box-shadow: 0 0 1rem grey;
+  
+    &__logo {
+      margin: 0;
+      text-align: center;
+    }
+
+    &--aveclogo {
+      margin-bottom: 0;
+    }
+
+    &__block--aveclogo {
+      display: flex;
+      align-items: center; 
+      justify-content: center;
+      position: relative;
+    
+      i {
+        margin-right: 5rem;
+        position: absolute;
+        left: 1rem;
+        top : 1rem;
+        color: black;
+      }
+    }
+  }
